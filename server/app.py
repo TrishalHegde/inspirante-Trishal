@@ -4,7 +4,8 @@ from dotenv import load_dotenv
 import os
 
 from routes.auth import auth_bp
-# We will import other blueprints here later
+from routes.events import events_bp
+from routes.registrations import registrations_bp
 
 load_dotenv()
 
@@ -13,6 +14,8 @@ app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 app.register_blueprint(auth_bp)
+app.register_blueprint(events_bp)
+app.register_blueprint(registrations_bp)
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 8000))
