@@ -1,6 +1,8 @@
 node_modules/
 .env
 server/venv/
+client/venv/
 server/__pycache__/
 .DS_Store
 *.pyc
+EDGE_CASE_TESTING.md
