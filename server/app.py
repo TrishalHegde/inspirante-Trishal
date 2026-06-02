@@ -10,8 +10,10 @@ from routes.registrations import registrations_bp
 load_dotenv()
 
 app = Flask(__name__)
-# Enable CORS for Vite dev server
-CORS(app, resources={r"/api/*": {"origins": "*"}})
+CORS(app, resources={r"/api/*": {"origins": [
+    "http://localhost:5173",
+    "https://inspirante-trishal-8apap2omr-trishal-hedges-projects.vercel.app"
+]}})
 
 app.register_blueprint(auth_bp)
 app.register_blueprint(events_bp)
