@@ -31,3 +31,16 @@ The fix is straightforward: use `bcrypt`. On registration, you'd hash the passwo
 I'd also move the JWT token from `sessionStorage` to an `httpOnly` cookie. Currently, any JavaScript running on the page can read the token from `sessionStorage`, which makes it vulnerable to XSS attacks. An `httpOnly` cookie is invisible to JavaScript — the browser sends it automatically with each request, and it can't be stolen by a malicious script. This would require a small change on both the Flask side (set the cookie in the response) and the React side (remove the manual `Authorization` header since the browser handles it).
 
 These are production-grade concerns. For the scope of this assignment, I prioritized getting all the features working correctly and clearly.
+
+---
+
+## Bonus: Going Live (Deployment)
+
+The brief mentioned deployment was a bonus, so I decided to go ahead and put it live. I wanted to make it as easy as possible for the review team to actually test the app without needing to set up MySQL locally. 
+
+I used a 100% free stack to pull this off:
+- **Aiven** for hosting the MySQL database
+- **Render** for the Flask backend (using Gunicorn for production)
+- **Vercel** for the React frontend
+
+It took a bit of extra effort to wire up the environment variables and fix CORS issues between Render and Vercel's dynamic URLs, but it was totally worth it. The app is live and fully functional for anyone with the link!
