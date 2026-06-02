@@ -12,7 +12,7 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": [
     "http://localhost:5173",
-    "https://inspirante-trishal-8apap2omr-trishal-hedges-projects.vercel.app"
+    "https://inspirante-trishal-git-main-trishal-hedges-projects.vercel.app"
 ]}})
 
 app.register_blueprint(auth_bp)
