@@ -35,4 +35,8 @@ npm run dev
 ```
 
 ### Known Issues
-- Currently setting up...
+- Currently, passwords are stored in plain text. In a production scenario, we should use bcrypt for password hashing.
+- Token is stored in memory/sessionStorage. Moving it to an `httpOnly` cookie would improve security.
+- The `seed.sql` script requires a local MySQL instance running.
+
+*All 10 behaviour checklist items pass successfully!*
