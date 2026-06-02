@@ -1,6 +1,8 @@
 # College Event Registration Portal
 **Assignment Reference:** `ISP-WEB-2631`
 
+**🔴 Live Demo:** [https://inspirante-trishal-git-main-trishal-hedges-projects.vercel.app/](https://inspirante-trishal-git-main-trishal-hedges-projects.vercel.app/)
+
 A full-stack web application where college administrators can manage events and students can register for them.
 
 ---
