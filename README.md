@@ -282,4 +282,3 @@ The backend already has CORS enabled for all origins in development mode. If you
 
 ---
 
-*All 10 behaviour checklist items from the assignment brief pass successfully.*
